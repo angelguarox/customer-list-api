@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Customers List</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+	</head>
+	<body>
+		<%- include ('partials/header') %>
+		<div class="container">
+			<div class="row mt-5">
+				<div class="col-md-4 mx-auto">
+					<div class="card border-dark mb-3 text-center">
+						<div class="card-header">
+							<h3 class="text-uppercase text-bold"><b>Add Costumer</b></h3>
+						</div>
+						<div class="card-body">
+							<form action="/add" method="post">
+								<div class="form-group">
+									<input type="text" name="name" placeholder="Fullname" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<input type="text" name="address" placeholder="Address" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<input type="text" name="phone" placeholder="Phone" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<button class="btn btn-dark btn-block">Save</button>
+								</div>
+							</form>
+							<div class="card-footer">
+								<p>All fields are required</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%- include ('partials/footer') %>
+	</body>
+</html>
